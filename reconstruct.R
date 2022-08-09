@@ -7,6 +7,7 @@ print('Setting Up Libraries...')
 library(phangorn)
 library(ape)
 library(svMisc)
+library(tidyverse)
 
 setwd(getwd())
 
@@ -47,13 +48,13 @@ print('Functions Loaded')
 
 
 #Loop
-n <- 1186
+n <- length(list.files('pruned/',pattern="tree$", full.names = TRUE, recursive = TRUE))
 #Progress Bar
 print('Starting ACSR...')
 for (x in 1:n){
 progress(n,x)
-treename <- paste('pruned/tree',x,'.tree', sep='')
-locations <- paste('pruned/tree',x,'.txt', sep='')
+treename <- paste('pruned/tree33_',x,'.tree', sep='')
+locations <- paste('pruned/tree33_',x,'.txt', sep='')
 tree <- read.tree(file=treename)
 
 location_info <- read.table(locations, header=TRUE, sep="\t")

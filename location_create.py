@@ -2,6 +2,7 @@
 import pandas as pd
 import os
 import treeswift
+from alive_progress import alive_bar
 
 wd = os.getcwd()
 os.chdir(wd)

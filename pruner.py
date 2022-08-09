@@ -12,20 +12,21 @@ s_node_list = [node for node in stree.traverse_postorder(leaves=False)]
 filename_df = pd.DataFrame(columns = ['node', 'file_name'])
 
 ### WHILE LOOP ###
-prune = True
 i = 0
-n = 1
+num = 1
 length = len(s_node_list)
+prune = True
 
 print('Pruning Trees')
-with alive_bar(len(s_node_list), force_tty = True) as bar:
+with alive_bar(422, force_tty = True) as bar:
     while prune == True:
         st1 = stree.extract_subtree(s_node_list[i])
         if st1.num_nodes() in range(20000,40000):
             node = s_node_list[i]
-            outfile = 'pruned/tree_' + str(num) + '.tree'
+            outfile = 'pruned/tree33_' + str(num) + '.tree'
             filename_df.loc[num-1] = [node.label] + [outfile]
             st1.write_tree_newick(filename = outfile, hide_rooted_prefix=True)
+            bar()
 
             top_node = tree.find_node_with_label(node.label)
             bottom_node = top_node.parent_node
@@ -38,12 +39,13 @@ with alive_bar(len(s_node_list), force_tty = True) as bar:
             s_node_list = [x for x in stree.traverse_postorder(leaves=False)]
             length = len(s_node_list)
             i = 0
-            n+=1
+            num+=1
         elif length <= 20000:
-            st1.write_tree_newick('tree_final.tree')
+            num += 1
+            outfile = 'pruned/tree33_' + str(num) + '.tree'
+            st1.write_tree_newick(outfile)
             print('Pruning Complete!')
             prune = False
         else:
             i += 1
-        bar()
 filename_df.to_csv('filename_df.tsv', sep = '\t', index = False)
