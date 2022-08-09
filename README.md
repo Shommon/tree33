@@ -2,8 +2,8 @@
 This code will prune tree33, a child node from the root that contains nearly all of the terminal nodes.
 
 ## R and Python Version
-Python 3.10
-R 4.1.2
+    Python 3.10
+    R 4.1.2
 
 ## Important Packages
 ### Python
