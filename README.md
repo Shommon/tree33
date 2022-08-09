@@ -19,10 +19,15 @@ Please have these packages installed:
 
 
 ### R
-  install.packages('phangorn')
-  install.packages('ape')
-  install.packages("svMisc")
-  install.packages("tidyverse")
+Please have these packages installed:
+
+    install.packages('phangorn')
+    
+    install.packages('ape')
+    
+    install.packages("svMisc")
+    
+    install.packages("tidyverse")
 
 ### Running Scripts
 1. Run pruner.py, this prunes tree33 into 20,000 node trees by traversing a ladderized tree in postorder. Note: the progressbar may not fully progress to the end, if it overflows or underflows that is okay, as long as the code ends with "Complete!"
