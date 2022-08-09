@@ -8,7 +8,7 @@ R 4.1.2
 ## Important Packages
 ### Python
 Please have these packages installed
-- pip install alive-progresspip install treeswiftpip install -U dendropypip install pandas
+	pip install alive-progresspip install treeswiftpip install -U dendropypip install pandas
 
 
 ### R
