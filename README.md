@@ -10,8 +10,11 @@ R 4.1.2
 Please have these packages installed:
 
   pip install alive-progress
+  
   pip install treeswift
+  
   pip install -U dendropy
+  
   pip install pandas
 
 
