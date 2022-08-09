@@ -1,5 +1,7 @@
 # tree33
-This code will prune tree33, a child node from the root that contains nearly all of the terminal nodes.
+This code will prune tree33 and perform ACCTRAN ACSR on all subtrees created.
+
+Tree33 is one of the first child nodes of the original tree's root, and contains the largest number of descendants.
 
 ## R and Python Version
     Python 3.10
